@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17323539, g: 0.16459554, b: 0.2966911, a: 1}
+  m_IndirectSpecularColor: {r: 0.17316318, g: 0.16457182, b: 0.29665613, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 59290112}
   - component: {fileID: 59290111}
   - component: {fileID: 59290110}
-  - component: {fileID: 59290114}
   - component: {fileID: 59290115}
   m_Layer: 0
   m_Name: Venus
@@ -222,18 +221,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &59290114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 59290109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a301ba73a43aaaa418a61cd90af3795a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &59290115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,6 +236,7 @@ MonoBehaviour:
   rotationSpeed: 0.1
   sunTransform: {fileID: 2114407507}
   shadow: {fileID: 7038277406196811020, guid: 7e340959a45b17749ab5b55eb3cc4c3e, type: 3}
+  controlButton: {fileID: 409990172}
 --- !u!1 &88480790
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,7 +250,7 @@ GameObject:
   - component: {fileID: 88480793}
   - component: {fileID: 88480792}
   m_Layer: 5
-  m_Name: Button_Pause
+  m_Name: Button_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -509,7 +497,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 775617629}
-  m_PlaneDistance: 100
+  m_PlaneDistance: 7.5
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -556,7 +544,7 @@ GameObject:
   - component: {fileID: 409990174}
   - component: {fileID: 409990177}
   m_Layer: 5
-  m_Name: Button_Start
+  m_Name: Button_Control
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -628,8 +616,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 409990177}
-        m_TargetAssemblyTypeName: Button, Assembly-CSharp
-        m_MethodName: StartButton
+        m_TargetAssemblyTypeName: ButtonScript, Assembly-CSharp
+        m_MethodName: ControlButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -689,6 +677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eb7b9fd6feb189409d6e4273a68a5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tmp: {fileID: 1996680390}
 --- !u!1 &645742878
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,7 +890,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 775617627}
   m_LocalRotation: {x: 0.47792548, y: 0, z: 0, w: 0.8784004}
-  m_LocalPosition: {x: 0, y: 14.49, z: -11.48}
+  m_LocalPosition: {x: 0, y: 18.5, z: -16.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -920,7 +909,6 @@ GameObject:
   - component: {fileID: 920819065}
   - component: {fileID: 920819064}
   - component: {fileID: 920819063}
-  - component: {fileID: 920819067}
   - component: {fileID: 920819068}
   m_Layer: 0
   m_Name: Mars
@@ -1007,18 +995,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &920819067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 920819062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a301ba73a43aaaa418a61cd90af3795a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &920819068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1034,6 +1010,7 @@ MonoBehaviour:
   rotationSpeed: 0.1
   sunTransform: {fileID: 2114407507}
   shadow: {fileID: 7038277406196811020, guid: 7e340959a45b17749ab5b55eb3cc4c3e, type: 3}
+  controlButton: {fileID: 409990172}
 --- !u!1 &1017025374
 GameObject:
   m_ObjectHideFlags: 0
@@ -1046,7 +1023,6 @@ GameObject:
   - component: {fileID: 1017025377}
   - component: {fileID: 1017025376}
   - component: {fileID: 1017025375}
-  - component: {fileID: 1017025379}
   m_Layer: 0
   m_Name: Saturn
   m_TagString: Untagged
@@ -1132,18 +1108,6 @@ Transform:
   m_Father: {fileID: 1948505968}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1017025379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1017025374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a301ba73a43aaaa418a61cd90af3795a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1141093587
 GameObject:
   m_ObjectHideFlags: 0
@@ -1156,7 +1120,6 @@ GameObject:
   - component: {fileID: 1141093590}
   - component: {fileID: 1141093589}
   - component: {fileID: 1141093588}
-  - component: {fileID: 1141093592}
   - component: {fileID: 1141093593}
   m_Layer: 0
   m_Name: Uranus
@@ -1243,18 +1206,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1141093592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1141093587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a301ba73a43aaaa418a61cd90af3795a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1141093593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1270,6 +1221,7 @@ MonoBehaviour:
   rotationSpeed: 0.1
   sunTransform: {fileID: 2114407507}
   shadow: {fileID: 7038277406196811020, guid: 7e340959a45b17749ab5b55eb3cc4c3e, type: 3}
+  controlButton: {fileID: 409990172}
 --- !u!1 &1271193528
 GameObject:
   m_ObjectHideFlags: 0
@@ -1282,7 +1234,6 @@ GameObject:
   - component: {fileID: 1271193531}
   - component: {fileID: 1271193530}
   - component: {fileID: 1271193529}
-  - component: {fileID: 1271193533}
   - component: {fileID: 1271193534}
   m_Layer: 0
   m_Name: Earth
@@ -1369,18 +1320,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1271193533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271193528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a301ba73a43aaaa418a61cd90af3795a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1271193534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1396,6 +1335,7 @@ MonoBehaviour:
   rotationSpeed: 0.1
   sunTransform: {fileID: 2114407507}
   shadow: {fileID: 7038277406196811020, guid: 7e340959a45b17749ab5b55eb3cc4c3e, type: 3}
+  controlButton: {fileID: 409990172}
 --- !u!1 &1420256444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,7 +1470,6 @@ GameObject:
   - component: {fileID: 1428213348}
   - component: {fileID: 1428213347}
   - component: {fileID: 1428213346}
-  - component: {fileID: 1428213350}
   - component: {fileID: 1428213351}
   m_Layer: 0
   m_Name: Neptune
@@ -1617,18 +1556,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1428213350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1428213345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a301ba73a43aaaa418a61cd90af3795a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1428213351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1644,6 +1571,7 @@ MonoBehaviour:
   rotationSpeed: 0.1
   sunTransform: {fileID: 2114407507}
   shadow: {fileID: 7038277406196811020, guid: 7e340959a45b17749ab5b55eb3cc4c3e, type: 3}
+  controlButton: {fileID: 409990172}
 --- !u!1 &1637690332
 GameObject:
   m_ObjectHideFlags: 0
@@ -1739,7 +1667,6 @@ GameObject:
   - component: {fileID: 1688420104}
   - component: {fileID: 1688420103}
   - component: {fileID: 1688420102}
-  - component: {fileID: 1688420106}
   - component: {fileID: 1688420107}
   m_Layer: 0
   m_Name: Mercury
@@ -1826,18 +1753,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1688420106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1688420101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a301ba73a43aaaa418a61cd90af3795a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1688420107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1853,6 +1768,7 @@ MonoBehaviour:
   rotationSpeed: 0.1
   sunTransform: {fileID: 2114407507}
   shadow: {fileID: 7038277406196811020, guid: 7e340959a45b17749ab5b55eb3cc4c3e, type: 3}
+  controlButton: {fileID: 409990172}
 --- !u!1 &1714899275
 GameObject:
   m_ObjectHideFlags: 0
@@ -1959,7 +1875,6 @@ GameObject:
   - component: {fileID: 1864241517}
   - component: {fileID: 1864241516}
   - component: {fileID: 1864241515}
-  - component: {fileID: 1864241519}
   - component: {fileID: 1864241520}
   m_Layer: 0
   m_Name: Jupiter
@@ -2046,18 +1961,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1864241519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1864241514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a301ba73a43aaaa418a61cd90af3795a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1864241520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2073,6 +1976,7 @@ MonoBehaviour:
   rotationSpeed: 0.1
   sunTransform: {fileID: 2114407507}
   shadow: {fileID: 7038277406196811020, guid: 7e340959a45b17749ab5b55eb3cc4c3e, type: 3}
+  controlButton: {fileID: 409990172}
 --- !u!1 &1870902956
 GameObject:
   m_ObjectHideFlags: 0
@@ -2257,6 +2161,7 @@ MonoBehaviour:
   rotationSpeed: 0.1
   sunTransform: {fileID: 2114407507}
   shadow: {fileID: 7038277406196811020, guid: 7e340959a45b17749ab5b55eb3cc4c3e, type: 3}
+  controlButton: {fileID: 409990172}
 --- !u!1 &1996680388
 GameObject:
   m_ObjectHideFlags: 0
@@ -2315,7 +2220,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start
+  m_text: Play
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
